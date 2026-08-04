@@ -6,15 +6,17 @@
     <title>Calculator</title>
 </head>
 <body>
-  <main class="calculator">
-    <section class="display">
-        <div class="display_history"></div>
-        <div class="display_current">0</div>   
+  <main class="calculator" aria-label="Calculator">
+   <section class="display" aria-label="Calculator display">
+       <div id="display-history" class="display-history"></div>
+       <div id="display-current" class="display-current">0</div> 
     </section>
 
-    <section class="keypad">
-        <button class="key key-fn" action="clear">C</button> 
-
+   <section class="keypad" aria-label="Calculator keypad">
+        <button class="key key-fn" data-action="clear">C</button>
+        <button class="key key-fn" data-action="backspace">⌫</button>
+        <button class="key key-fn" data-action="percent">%</button>
+        <button class="key key-fn" data-action="divide">÷</button>
     </section>
 
   </main>
