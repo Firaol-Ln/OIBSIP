@@ -86,6 +86,30 @@ function calculate() {
     updateDisplay();
 }
 
+// Clear the calculator
+function clearAll() {
+    currentInput = "0";
+    previousInput = "";
+    operator = "";
+    newNumber = false;
+
+    updateDisplay();
+}
+
+// Delete the last digit
+function backspace() {
+    if (newNumber) {
+        return;
+    }
+
+    if (currentInput.length > 1) {
+        currentInput = currentInput.slice(0, -1);
+    } else {
+        currentInput = "0";
+    }
+
+    updateDisplay();
+}
 // Add click events to number buttons
 document.querySelectorAll('[data-action="number"]').forEach(button => {
     button.addEventListener("click", function () {
@@ -112,4 +136,18 @@ const equalsButton = document.querySelector('[data-action="equals"]');
 
 equalsButton.addEventListener("click", function () {
     calculate();
+});
+
+// Add click event to clear button
+const clearButton = document.querySelector('[data-action="clear"]');
+
+clearButton.addEventListener("click", function () {
+    clearAll();
+});
+
+// Add click event to backspace button
+const backspaceButton = document.querySelector('[data-action="backspace"]');
+
+backspaceButton.addEventListener("click", function () {
+    backspace();
 });
