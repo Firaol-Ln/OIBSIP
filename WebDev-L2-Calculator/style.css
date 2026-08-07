@@ -127,3 +127,8 @@ body {
 .key-wide {
     grid-column: span 2;
 }
+
+.key:focus-visible {
+    outline: 2px solid #4fd1c5;
+    outline-offset: 2px;
+}
