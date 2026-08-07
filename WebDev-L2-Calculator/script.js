@@ -22,7 +22,7 @@ updateDisplay();
 
 // Add a number to the display
 function inputNumber(num) {
-    if ( currentInput === "Error" currentInput === "0" || newNumber) {
+    if ( currentInput === "Error" || currentInput === "0" || newNumber) {
         currentInput = num;
         newNumber = false;
     } else {
