@@ -22,7 +22,7 @@ updateDisplay();
 
 // Add a number to the display
 function inputNumber(num) {
-    if (currentInput === "0" || newNumber) {
+    if ( currentInput === "Error" currentInput === "0" || newNumber) {
         currentInput = num;
         newNumber = false;
     } else {
@@ -46,13 +46,16 @@ function inputDecimal() {
 
 // Choose an operator
 function chooseOperator(op) {
+    if (operator !== "" && !newNumber) {
+        calculate();
+    }
+
     previousInput = currentInput;
     operator = op;
     newNumber = true;
 
     updateDisplay();
 }
-
 // Perform the calculation
 function calculate() {
     let first = parseFloat(previousInput);
