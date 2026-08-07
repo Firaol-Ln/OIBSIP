@@ -52,6 +52,40 @@ function chooseOperator(op) {
 
     updateDisplay();
 }
+
+// Perform the calculation
+function calculate() {
+    let first = parseFloat(previousInput);
+    let second = parseFloat(currentInput);
+    let answer;
+
+    if (operator === "+") {
+        answer = first + second;
+    } else if (operator === "−") {
+        answer = first - second;
+    } else if (operator === "×") {
+        answer = first * second;
+    } else if (operator === "÷") {
+        if (second === 0) {
+            currentInput = "Error";
+            previousInput = "";
+            operator = "";
+            newNumber = true;
+            updateDisplay();
+            return;
+        }
+
+        answer = first / second;
+    }
+
+    currentInput = String(answer);
+    previousInput = "";
+    operator = "";
+    newNumber = true;
+
+    updateDisplay();
+}
+
 // Add click events to number buttons
 document.querySelectorAll('[data-action="number"]').forEach(button => {
     button.addEventListener("click", function () {
@@ -71,4 +105,11 @@ document.querySelectorAll('[data-action="operator"]').forEach(button => {
     button.addEventListener("click", function () {
         chooseOperator(this.dataset.operator);
     });
+});
+
+// Add click event to equals button
+const equalsButton = document.querySelector('[data-action="equals"]');
+
+equalsButton.addEventListener("click", function () {
+    calculate();
 });
