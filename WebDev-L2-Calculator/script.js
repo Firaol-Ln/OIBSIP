@@ -31,9 +31,28 @@ function inputNumber(num) {
 
     updateDisplay();
 }
+
+// Add a decimal point
+function inputDecimal() {
+    if (newNumber) {
+        currentInput = "0.";
+        newNumber = false;
+    } else if (!currentInput.includes(".")) {
+        currentInput += ".";
+    }
+
+    updateDisplay();
+}
 // Add click events to number buttons
 document.querySelectorAll('[data-action="number"]').forEach(button => {
     button.addEventListener("click", function () {
         inputNumber(this.dataset.number);
     });
+});
+
+// Add click event to decimal button
+const decimalButton = document.querySelector('[data-action="decimal"]');
+
+decimalButton.addEventListener("click", function () {
+    inputDecimal();
 });
