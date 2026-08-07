@@ -110,6 +110,16 @@ function backspace() {
 
     updateDisplay();
 }
+
+// Convert the current number to a percentage
+function percent() {
+    const value = parseFloat(currentInput);
+
+    if (!isNaN(value)) {
+        currentInput = String(value / 100);
+        updateDisplay();
+    }
+}
 // Add click events to number buttons
 document.querySelectorAll('[data-action="number"]').forEach(button => {
     button.addEventListener("click", function () {
@@ -150,4 +160,11 @@ const backspaceButton = document.querySelector('[data-action="backspace"]');
 
 backspaceButton.addEventListener("click", function () {
     backspace();
+});
+
+// Add click event to percent button
+const percentButton = document.querySelector('[data-action="percent"]');
+
+percentButton.addEventListener("click", function () {
+    percent();
 });
