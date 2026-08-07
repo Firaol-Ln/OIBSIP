@@ -17,3 +17,23 @@ function updateDisplay() {
         history.textContent = "";
     }
 }
+
+updateDisplay();
+
+// Add a number to the display
+function inputNumber(num) {
+    if (currentInput === "0" || newNumber) {
+        currentInput = num;
+        newNumber = false;
+    } else {
+        currentInput += num;
+    }
+
+    updateDisplay();
+}
+// Add click events to number buttons
+document.querySelectorAll('[data-action="number"]').forEach(button => {
+    button.addEventListener("click", function () {
+        inputNumber(this.dataset.number);
+    });
+});
