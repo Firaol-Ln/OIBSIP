@@ -43,6 +43,15 @@ function inputDecimal() {
 
     updateDisplay();
 }
+
+// Choose an operator
+function chooseOperator(op) {
+    previousInput = currentInput;
+    operator = op;
+    newNumber = true;
+
+    updateDisplay();
+}
 // Add click events to number buttons
 document.querySelectorAll('[data-action="number"]').forEach(button => {
     button.addEventListener("click", function () {
@@ -55,4 +64,11 @@ const decimalButton = document.querySelector('[data-action="decimal"]');
 
 decimalButton.addEventListener("click", function () {
     inputDecimal();
+});
+
+// Add click events to operator buttons
+document.querySelectorAll('[data-action="operator"]').forEach(button => {
+    button.addEventListener("click", function () {
+        chooseOperator(this.dataset.operator);
+    });
 });
