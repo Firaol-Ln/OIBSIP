@@ -67,7 +67,7 @@ main {
 
 .tagline {
   font-size: 18px;
-  color: #D9D2C4;
+  color: #d9d2c4;
   font-style: italic;
   max-width: 32em;
   margin: 0 auto;
@@ -92,17 +92,21 @@ main {
   width: 100%;
   max-width: 240px;
   border-radius: 4px;
-  box-shadow: 0 0 0 1px rgba(184,147,90,0.4), 0 0 40px 4px rgba(143,227,166,0.25);
+  box-shadow:
+    0 0 0 1px rgba(184, 147, 90, 0.4),
+    0 0 40px 4px rgba(143, 227, 166, 0.25);
 }
 
 .image-credit {
   font-family: var(--mono);
   font-size: 0.7rem;
-  color: #7A7364;
+  color: #7a7364;
   margin-top: 0.6rem;
 }
 
-.portrait-text { flex: 2 1 320px; }
+.portrait-text {
+  flex: 2 1 320px;
+}
 
 .portrait-text h2 {
   font-size: 28px;
@@ -110,4 +114,34 @@ main {
   color: var(--ink-text);
 }
 
-.portrait-text p { font-size: 17px; }
+.portrait-text p {
+  font-size: 17px;
+}
+
+.about {
+  padding: 60px 0;
+}
+
+.about h2 {
+  font-size: 30px;
+  color: var(--ink-text);
+  border-bottom: 2px solid var(--brass);
+  padding-bottom: 10px;
+  margin-bottom: 25px;
+}
+
+
+.biography p {
+  font-size: 17px;
+  margin-bottom: 20px;
+}
+
+.drop-cap {
+  float: left;
+  font-family: var(--serif);
+  font-size: 3.8rem;
+  line-height: 0.75;
+  font-weight: 700;
+  padding: 4px 8px 0 0;
+  color: var(--brass);
+}
