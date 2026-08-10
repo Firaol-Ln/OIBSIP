@@ -130,7 +130,6 @@ main {
   margin-bottom: 25px;
 }
 
-
 .biography p {
   font-size: 17px;
   margin-bottom: 20px;
@@ -144,4 +143,25 @@ main {
   font-weight: 700;
   padding: 4px 8px 0 0;
   color: var(--brass);
+}
+
+/*  Timeline  */
+.timeline {
+  background-color: var(--ink);
+  color: var(--parchment);
+  padding: 60px 0;
+  margin: 0 -20px;
+  padding-left: 20px;
+  padding-right: 20px;
+}
+
+.timeline h2 {
+  font-size: 30px;
+  text-align: center;
+  color: var(--parchment);
+  margin-bottom: 30px;
+}
+
+.timeline .section-label {
+  text-align: center;
 }
