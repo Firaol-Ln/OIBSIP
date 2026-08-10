@@ -231,3 +231,16 @@ main {
   color: var(--brass);
   letter-spacing: 0.05em;
 }
+
+.tribute { padding: 60px 0; }
+
+.tribute h2 {
+  font-size: 30px;
+  margin-bottom: 20px;
+  color: var(--ink-text);
+}
+
+.tribute p {
+  font-size: 17px;
+  margin-bottom: 18px;
+}
