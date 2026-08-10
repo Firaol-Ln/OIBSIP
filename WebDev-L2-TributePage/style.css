@@ -263,3 +263,17 @@ footer p {
 footer a {
   color: var(--radium);
 }
+
+/*  Responsive */
+@media (max-width: 600px) {
+  .hero { padding: 60px 15px; }
+  .hero h1 { font-size: 36px; }
+  .tagline { font-size: 16px; }
+
+  .portrait-section { flex-direction: column; text-align: center; padding: 40px 0; }
+  .about, .timeline, .tribute, .quote-section { padding: 40px 0; }
+  .about h2, .timeline h2, .tribute h2 { font-size: 24px; }
+  .biography p, .tribute p { font-size: 16px; }
+  .tl-card { padding: 16px; }
+  .drop-cap { font-size: 3rem; }
+}
