@@ -165,3 +165,8 @@ main {
 .timeline .section-label {
   text-align: center;
 }
+
+.timeline-list {
+  max-width: 700px;
+  margin: 0 auto;
+}
