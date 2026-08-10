@@ -232,7 +232,9 @@ main {
   letter-spacing: 0.05em;
 }
 
-.tribute { padding: 60px 0; }
+.tribute {
+  padding: 60px 0;
+}
 
 .tribute h2 {
   font-size: 30px;
@@ -243,4 +245,21 @@ main {
 .tribute p {
   font-size: 17px;
   margin-bottom: 18px;
+}
+
+footer {
+  background-color: var(--ink);
+  color: var(--parchment);
+  text-align: center;
+  padding: 25px 20px;
+}
+
+footer p {
+  font-family: var(--mono);
+  font-size: 13px;
+  margin-bottom: 6px;
+}
+
+footer a {
+  color: var(--radium);
 }
