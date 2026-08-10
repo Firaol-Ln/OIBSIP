@@ -202,3 +202,32 @@ main {
   font-size: 16px;
   color: #c7c0b2;
 }
+
+.quote-section {
+  text-align: center;
+  padding: 70px 20px;
+  background-color: var(--parchment-dim);
+}
+
+.quote-mark {
+  font-family: var(--serif);
+  font-size: 3rem;
+  color: var(--brass);
+  line-height: 1;
+}
+
+.quote-section blockquote {
+  font-family: var(--serif);
+  font-style: italic;
+  font-size: clamp(1.2rem, 3vw, 1.6rem);
+  max-width: 32em;
+  margin: 0.5rem auto 1rem;
+  color: var(--ink-text);
+}
+
+.quote-author {
+  font-family: var(--mono);
+  font-size: 0.85rem;
+  color: var(--brass);
+  letter-spacing: 0.05em;
+}
