@@ -146,3 +146,15 @@ function deleteTask(id) {
   saveTasks();
   render();
 }
+
+taskForm.addEventListener("submit", (e) => {
+  e.preventDefault();
+  const text = taskInput.value.trim();
+  if (!text) return;
+  addTask(text);
+  taskInput.value = "";
+  taskInput.focus();
+});
+
+//init
+render();
