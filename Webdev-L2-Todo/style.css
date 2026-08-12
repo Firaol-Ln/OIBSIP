@@ -1,0 +1,28 @@
+* {
+  box-sizing: border-box;
+}
+:root {
+  --bg: #f5f3ef;
+  --card: #ffffff;
+  --ink: #22262b;
+  --muted: #767c85;
+  --accent: #4c6ef5;
+  --accent-soft: #e8ecff;
+  --success: #2ba84a;
+  --success-soft: #e4f7e9;
+  --danger: #e5484d;
+  --border: #e4e1da;
+  --sans: "Segoe UI", system-ui, -apple-system, sans-serif;
+}
+
+body{
+    margin: 0;
+    font-family: var(--sans);
+    background: var(--bg);
+    color: var(--ink);
+    padding: 3rem 1rem;
+}
+
+.app{
+
+}
