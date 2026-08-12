@@ -58,3 +58,56 @@ function render() {
   pendingEmpty.classList.toggle("visible", pending.length === 0);
   completedEmpty.classList.toggle("visible", completed.length === 0);
 }
+
+function buildTaskElement(task) {
+  const node = template.content.firstElementChild.cloneNode(true);
+  node.dataset.id = task.id;
+  if (task.completed) node.classList.add("completed");
+
+  const toggle = node.querySelector(".task-toggle");
+  const text = node.querySelector(".task-text");
+  const editInput = node.querySelector(".task-edit-input");
+  const editBtn = node.querySelector(".edit-btn");
+  const saveBtn = node.querySelector(".save-btn");
+  const deleteBtn = node.querySelector(".delete-btn");
+  const timestamp = node.querySelector(".task-timestamp");
+
+  toggle.checked = task.completed;
+  text.textContent = task.text;
+  editInput.value = task.text;
+
+  const label = task.completed
+    ? `Completed ${formatTime(task.completedAt)}`
+    : `Added ${formatTime(task.createdAt)}`;
+  timestamp.textContent = label;
+
+  toggle.addEventListener("change", () => toggleComplete(task.id));
+
+  deleteBtn.addEventListener("click", () => deleteTask(task.id));
+
+  editBtn.addEventListener("click", () => {
+    text.style.display = "none";
+    editInput.style.display = "inline-block";
+    editBtn.style.display = "none";
+    saveBtn.style.display = "inline-block";
+    editInput.focus();
+    editInput.select();
+  });
+
+  const commitEdit = () => {
+    const newText = editInput.value.trim();
+    if (newText) {
+      updateTaskText(task.id, newText);
+    } else {
+      render();
+    }
+  };
+
+  saveBtn.addEventListener("click", commitEdit);
+  editInput.addEventListener("keydown", (e) => {
+    if (e.key === "Enter") commitEdit();
+    if (e.key === "Escape") render();
+  });
+
+  return node;
+}
