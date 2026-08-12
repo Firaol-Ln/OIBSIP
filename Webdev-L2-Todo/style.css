@@ -185,3 +185,22 @@ h1 {
 .delete-btn:hover {
   background: #fce8e8;
 }
+
+.empty-state {
+  display: none;
+  text-align: center;
+  color: var(--muted);
+  font-size: 0.88rem;
+  padding: 1.5rem 1rem;
+  border: 1px dashed var(--border);
+  border-radius: 10px;
+  margin: 0;
+}
+
+.empty-state.visible { display: block; }
+
+@media (max-width: 480px) {
+  body { padding: 1.75rem 0.9rem; }
+  .task-form { flex-direction: column; }
+  .task-meta { padding-left: 0; }
+}
