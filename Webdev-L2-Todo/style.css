@@ -69,3 +69,34 @@ h1 {
 .task-form button:hover {
   background: #3d5be0;
 }
+
+.list-section {
+  margin-bottom: 2.5rem;
+}
+
+.list-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: baseline;
+  margin-bottom: 0.85rem;
+}
+
+.list-header h2 {
+  font-size: 1.05rem;
+  margin: 0;
+}
+
+.count {
+  font-size: 0.8rem;
+  color: var(--muted);
+  font-weight: 600;
+}
+
+.task-list {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 0.6rem;
+}
