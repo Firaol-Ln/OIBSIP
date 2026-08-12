@@ -111,3 +111,38 @@ function buildTaskElement(task) {
 
   return node;
 }
+
+function addTask(text) {
+  tasks.unshift({
+    id: generateId(),
+    text,
+    completed: false,
+    createdAt: new Date().toISOString(),
+    completedAt: null,
+  });
+  saveTasks();
+  render();
+}
+
+function toggleComplete(id) {
+  const task = tasks.find((t) => t.id === id);
+  if (!task) return;
+  task.completed = !task.completed;
+  task.completedAt = task.completed ? new Date().toISOString() : null;
+  saveTasks();
+  render();
+}
+
+function updateTaskText(id, newText) {
+  const task = tasks.find((t) => t.id === id);
+  if (!task) return;
+  task.text = newText;
+  saveTasks();
+  render();
+}
+
+function deleteTask(id) {
+  tasks = tasks.filter((t) => t.id !== id);
+  saveTasks();
+  render();
+}
