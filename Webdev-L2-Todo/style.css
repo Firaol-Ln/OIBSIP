@@ -100,3 +100,88 @@ h1 {
   flex-direction: column;
   gap: 0.6rem;
 }
+
+.task-item {
+  background: var(--card);
+  border: 1px solid var(--border);
+  border-radius: 10px;
+  padding: 0.8rem 1rem;
+}
+
+.task-main {
+  display: flex;
+  align-items: center;
+  gap: 0.7rem;
+}
+
+.task-toggle {
+  width: 18px;
+  height: 18px;
+  accent-color: var(--success);
+  cursor: pointer;
+  flex-shrink: 0;
+}
+
+.task-text {
+  flex: 1;
+  font-size: 0.95rem;
+  word-break: break-word;
+}
+
+.task-item.completed .task-text {
+  text-decoration: line-through;
+  color: var(--muted);
+}
+
+.task-edit-input {
+  flex: 1;
+  padding: 0.4rem 0.6rem;
+  border: 1px solid var(--accent);
+  border-radius: 6px;
+  font-size: 0.95rem;
+  font-family: inherit;
+}
+
+.task-meta {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: 0.5rem;
+  padding-left: 2rem;
+}
+
+.task-timestamp {
+  font-size: 0.72rem;
+  color: var(--muted);
+}
+
+.task-actions {
+  display: flex;
+  gap: 0.5rem;
+}
+
+.task-actions button {
+  border: none;
+  background: none;
+  font-size: 0.78rem;
+  font-weight: 600;
+  cursor: pointer;
+  padding: 0.25rem 0.5rem;
+  border-radius: 5px;
+}
+
+.edit-btn,
+.save-btn {
+  color: var(--accent);
+}
+.edit-btn:hover,
+.save-btn:hover {
+  background: var(--accent-soft);
+}
+
+.delete-btn {
+  color: var(--danger);
+}
+.delete-btn:hover {
+  background: #fce8e8;
+}
