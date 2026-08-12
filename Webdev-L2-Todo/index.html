@@ -19,6 +19,26 @@
         />
         <button type="submit">Add Task</button>
       </form>
+      
+      <section class="list-section">
+        <div class="list-header">
+          <h2>Pending Tasks</h2>
+          <span class="count" id="pendingCount">0 pending</span>
+        </div>
+        <ul class="task-list" id="pendingList"></ul>
+        <p class="empty-state" id="pendingEmpty">
+          Nothing pending — add a task above to get started.
+        </p>
+      </section>
+
+      <section class="list-section">
+        <div class="list-header">
+          <h2>Completed Tasks</h2>
+          <span class="count" id="completedCount">0 completed</span>
+        </div>
+        <ul class="task-list" id="completedList"></ul>
+        <p class="empty-state" id="completedEmpty">No completed tasks yet.</p>
+      </section>
     </main>
   </body>
 </html>
