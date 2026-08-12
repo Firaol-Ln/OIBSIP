@@ -33,3 +33,39 @@ h1 {
   margin-bottom: 1.5rem;
 }
 
+/* Form */
+.task-form {
+  display: flex;
+  gap: 0.6rem;
+  margin-bottom: 2.25rem;
+}
+
+.task-form input {
+  flex: 1;
+  padding: 0.7rem 0.9rem;
+  border: 1px solid var(--border);
+  border-radius: 8px;
+  font-size: 0.95rem;
+  background: var(--card);
+}
+
+.task-form input:focus {
+  outline: none;
+  border-color: var(--accent);
+  box-shadow: 0 0 0 3px var(--accent-soft);
+}
+
+.task-form button {
+  padding: 0.7rem 1.2rem;
+  border: none;
+  border-radius: 8px;
+  background: var(--accent);
+  color: white;
+  font-weight: 600;
+  font-size: 0.9rem;
+  cursor: pointer;
+}
+
+.task-form button:hover {
+  background: #3d5be0;
+}
