@@ -39,3 +39,22 @@ function formatTime(isoString) {
 function generateId() {
   return Date.now().toString(36) + Math.random().toString(36).slice(2, 7);
 }
+
+function render() {
+  pendingList.innerHTML = "";
+  completedList.innerHTML = "";
+
+  const pending = tasks.filter((t) => !t.completed);
+  const completed = tasks.filter((t) => t.completed);
+
+  pending.forEach((task) => pendingList.appendChild(buildTaskElement(task)));
+  completed.forEach((task) =>
+    completedList.appendChild(buildTaskElement(task)),
+  );
+
+  pendingCount.textContent = `${pending.length} pending`;
+  completedCount.textContent = `${completed.length} completed`;
+
+  pendingEmpty.classList.toggle("visible", pending.length === 0);
+  completedEmpty.classList.toggle("visible", completed.length === 0);
+}
