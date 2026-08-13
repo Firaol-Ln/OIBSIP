@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Login |  Task 4</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+  <main class="auth-card">
+    <h1>Welcome Back</h1>
+    <p class="subtitle">Log in to access your dashboard.</p>
+
+    <form id="loginForm" novalidate>
+      <label for="loginEmail">Username or Email</label>
+      <input type="text" id="loginEmail" name="loginEmail" required />
+
+      <label for="loginPassword">Password</label>
+      <input type="password" id="loginPassword" name="loginPassword" required />
+
+      <p class="error-msg" id="loginError"></p>
+
+      <button type="submit">Login</button>
+    </form>
+
+    <p class="switch-link">Don't have an account? <a href="index.html">Register</a></p>
+  </main>
+
+  <script src="auth.js"></script>
+  <script src="login.js"></script>
+</body>
+</html>
