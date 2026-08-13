@@ -1,0 +1,31 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Register | Task 4</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <h1>Create an Account</h1>
+    <p class="subtitle">Register to access your dashboard</p>
+
+    <form id="registerForm" novalidate>
+      <label for="username">Username or Email</label>
+      <input type="text" id="username" name="username" required />
+    
+      <label for="regPassword">Password</label>
+      <input type="password" id="regPassword" name="regPassword" required />
+      <p class="hint">At least 8 characters, including 1 number.</p>
+    
+      <label for="regConfirm">Confirm Password</label>
+      <input type="password" id="regConfirm" name="regConfirm" required />
+
+      <p class="error-msg" id="registerError"></p>
+      <p class="success-msg" id="registerSuccess"></p>
+
+      <button type="submit">Register</button>
+    </form>
+    </form>
+  </body>
+</html>
