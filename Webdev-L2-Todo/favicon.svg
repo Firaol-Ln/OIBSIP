@@ -1,0 +1,21 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100">
+  <!-- Rounded Background (Vibrant Purple) -->
+  <rect x="5" y="5" width="90" height="90" rx="22" fill="#6c5ce7" />
+  
+  <!-- List Paper -->
+  <rect x="18" y="15" width="64" height="70" rx="6" fill="#ffffff" />
+  
+  <!-- First Task (Completed) -->
+  <!-- Green Checkbox -->
+  <rect x="28" y="28" width="16" height="16" rx="4" fill="#00b894" />
+  <!-- White Checkmark -->
+  <path d="M 32 36 L 35 39 L 41 32" stroke="#ffffff" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" fill="none" />
+  <!-- Crossed-out / Darker text line -->
+  <rect x="52" y="34" width="20" height="5" rx="2.5" fill="#b2bec3" />
+  
+  <!-- Second Task (Pending) -->
+  <!-- Empty Checkbox (Light Gray) -->
+  <rect x="28" y="55" width="16" height="16" rx="4" fill="#dfe6e9" />
+  <!-- Pending text line -->
+  <rect x="52" y="61" width="20" height="5" rx="2.5" fill="#dfe6e9" />
+</svg>

@@ -1,0 +1,14 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100">
+  <!-- Trustworthy Blue Background -->
+  <circle cx="50" cy="50" r="45" fill="#2980b9" />
+  
+  <!-- Lock Shackle (White) -->
+  <path d="M 35 45 L 35 32 A 15 15 0 0 1 65 32 L 65 45" fill="none" stroke="#ffffff" stroke-width="8" stroke-linecap="round" />
+  
+  <!-- Lock Body (Gold/Yellow) -->
+  <rect x="25" y="45" width="50" height="36" rx="6" fill="#f1c40f" />
+  
+  <!-- Keyhole (Punched out using the background color) -->
+  <circle cx="50" cy="57" r="5" fill="#2980b9" />
+  <path d="M 48 58 L 46 68 L 54 68 L 52 58 Z" fill="#2980b9" />
+</svg>

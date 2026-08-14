@@ -24,12 +24,13 @@ registerForm.addEventListener("submit", async (e) => {
   const password = regPassword.value;
   const confirm = regConfirm.value;
 
-  // Basic form validation — no empty submissions
+  // Basic form validation
   if (!identifier || !password || !confirm) {
     showError("Please fill in every field before submitting.");
     return;
   }
 
+  // Check password requirements
   if (!isPasswordValid(password)) {
     showError(
       "Password must be at least 8 characters and include at least 1 number.",
@@ -37,23 +38,36 @@ registerForm.addEventListener("submit", async (e) => {
     return;
   }
 
+  // Check password confirmation
   if (password !== confirm) {
     showError("Passwords do not match.");
     return;
   }
 
+  // Check if user already exists
   if (findUser(identifier)) {
     showError("An account with that username or email already exists.");
     return;
   }
 
-  // Store the user with a hashed password — never plain text
+  // Hash password
   const passwordHash = await hashPassword(password);
+
+  // Get existing users
   const users = getUsers();
-  users.push({ identifier, passwordHash, createdAt: new Date().toISOString() });
+
+  // Add new user
+  users.push({
+    identifier: identifier,
+    passwordHash: passwordHash,
+    createdAt: new Date().toISOString(),
+  });
+
+  // Save users
   saveUsers(users);
 
   showSuccess("Account created! Redirecting you to login...");
+
   registerForm.reset();
 
   setTimeout(() => {

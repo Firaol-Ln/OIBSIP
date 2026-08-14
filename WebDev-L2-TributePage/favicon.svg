@@ -1,0 +1,22 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100">
+  <!-- Dark Elegant Background -->
+  <circle cx="50" cy="50" r="45" fill="#2c3e50" />
+  
+  <!-- Outer Flame Glow (Soft White) -->
+  <path d="M50 15 Q 32 45 50 58 Q 68 45 50 15 Z" fill="#ffffff" opacity="0.2" />
+  
+  <!-- Main White Flame -->
+  <path d="M50 22 Q 38 47 50 58 Q 62 47 50 22 Z" fill="#ffffff" opacity="0.7" />
+  
+  <!-- Inner Bright White Flame -->
+  <path d="M50 35 Q 44 50 50 58 Q 56 50 50 35 Z" fill="#ffffff" />
+  
+  <!-- Wick -->
+  <line x1="50" y1="58" x2="50" y2="62" stroke="#95a5a6" stroke-width="2" />
+  
+  <!-- Candle Body -->
+  <rect x="38" y="62" width="24" height="23" fill="#ecf0f1" rx="2" />
+  
+  <!-- Melted Wax / Base -->
+  <path d="M35 85 Q 50 90 65 85 Z" fill="#bdc3c7" />
+</svg>
