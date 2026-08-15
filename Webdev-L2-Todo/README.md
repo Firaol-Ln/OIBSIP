@@ -2,9 +2,6 @@
 
 An interactive to-do list app with add, complete, edit, and delete functionality, built for the Oasis Infobyte Web Development Internship (Task 3).
 
-## 🔗 Live Demo
-[Add your deployed link here]
-
 ## Feature Checklist
 - [x] Input field + "Add Task" button
 - [x] New tasks appear immediately in Pending Tasks
